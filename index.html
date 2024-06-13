@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gemini Image Demo</title>
+</head>
+<body>
+    <h1>Gemini Application</h1>
+    <form action="/" method="post" enctype="multipart/form-data">
+        <label for="input">Input Prompt:</label>
+        <input type="text" id="input" name="input" required>
+        <br><br>
+        <label for="image">Choose an image:</label>
+        <input type="file" id="image" name="image" accept="image/jpeg, image/png">
+        <br><br>
+        <button type="submit">Tell me about the image</button>
+    </form>
+    {% if response %}
+    <h2>The Response is:</h2>
+    <p>{{ response }}</p>
+    {% endif %}
+</body>
+</html>
